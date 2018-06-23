@@ -48,12 +48,28 @@ void subtrairMatrizes(float a[20][20], float b[20][20],
            for (j = 0; j < n; j = j + 1) c[i][j] = a[i][j] - b[i][j];
 }
 
+void multiplicarMatrizes(float a[20][20], float b[20][20],
+       float c[20][20], int l, int m, int n)
+{
+       int i, j, k;
+       for (i = 0; i < l; i = i + 1)
+       for (j = 0; j < m; j = j + 1){
+            c[i][j] = 0.0;
+            for (k = 0; k < n; k = k + 1)
+            c[i][j] = a[i][k] * b[k][j] + c[i][j];
+}
+}
+
+
 void escreverMatriz(float mat[20][20], float m, int n)
    {
        int i, j;
        for (i = 0; i < m; i = i + 1)
        {
-           for (j = 0; j < n; j = j + 1) printf("%3.1f ", mat[i][j]);
+           for (j = 0; j < n; j = j + 1)
+           printf("%5.1f ", mat[i][j]);
            printf("\n");
+
        }
    }
+
