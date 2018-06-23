@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include "funcoes.h"
 #include <stdlib.h>
+#include <time.h>
 
 int main(void)
 {
        int opcao, numLA = 21, numLB =21, numCA =21, numCB =21;
        float m1[20][20], m2[20][20], m3[20][20];
+
+       srand(time(NULL));
 
        do{
     menu();
@@ -26,10 +29,18 @@ int main(void)
        scanf("%d", &numCB);
       break;
     case 3:
-      printf("fat  = %d\n");
+      for(int l=0;l<20;l++){
+    for(int c=0;c<20;c++){
+        m1[l][c] = (rand()% 20);
+    }
+}
       break;
     case 4:
-      printf("fat  = %d\n");
+            for(int l=0;l<20;l++){
+    for(int c=0;c<20;c++){
+        m2[l][c] = (rand()% 20);
+    }
+}
       break;
     case 5:
         printf("informe os valores da matriz A:\n");
@@ -41,25 +52,21 @@ int main(void)
       break;
     case 7:
       somarMatrizes(m1, m2, m3, numLA, numCA);
-      printf("Matriz A + Matriz B = \n");
-      escreverMatriz(m3, numLA, numCA);
       break;
     case 8:
       subtrairMatrizes(m1, m2, m3, numLA, numCA);
-      printf("Matriz A - Matriz B = \n");
-      escreverMatriz(m3, numLA, numCA);
       break;
     case 9:
-      printf("fat  = \n");
+      multiplicarMatrizes(m1, m2, m3, numLA, numCB, numCA);
       break;
     case 10:
-      printf("fat  = %d\n");
+      escreverMatriz(m1, numLA, numCA);
       break;
     case 11:
-      printf("fat  = %d\n");
+      escreverMatriz(m2, numLB, numCB);
       break;
     case 12:
-      printf("fat  = %d\n");
+      escreverMatriz(m3, numLA, numCB);
       break;
     case 13:
       printf("fat  = %d\n");
