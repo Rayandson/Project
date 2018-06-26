@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 void menu(void){
-  printf("-------- opcoes -------\n\n");
+  printf("-------- PROGRAMA DE MANIPULACAO DE MATRIZES -------\n\n");
   printf(" (1) Definir o tamanho da matriz A\n");
   printf(" (2) Definir o tamanho da matriz B\n");
   printf(" (3) Preencher a matriz A com valores aleatorios\n");
@@ -37,7 +37,8 @@ void somarMatrizes(float a[20][20], float b[20][20],
 {
        int i, j;
        for (i = 0; i < m; i = i + 1)
-           for (j = 0; j < n; j = j + 1) c[i][j] = a[i][j] + b[i][j];
+           for (j = 0; j < n; j = j + 1)
+                c[i][j] = a[i][j] + b[i][j];
 }
 
 void subtrairMatrizes(float a[20][20], float b[20][20],
@@ -45,7 +46,8 @@ void subtrairMatrizes(float a[20][20], float b[20][20],
 {
        int i, j;
        for (i = 0; i < m; i = i + 1)
-           for (j = 0; j < n; j = j + 1) c[i][j] = a[i][j] - b[i][j];
+           for (j = 0; j < n; j = j + 1)
+                c[i][j] = a[i][j] - b[i][j];
 }
 
 void multiplicarMatrizes(float a[20][20], float b[20][20],
