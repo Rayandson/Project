@@ -63,7 +63,7 @@ void multiplicarMatrizes(float a[20][20], float b[20][20],
 }
 
 
-void escreverMatriz(float mat[20][20], float m, int n)
+void escreverMatriz(float mat[20][20], int m, int n)
    {
        int i, j;
        for (i = 0; i < m; i = i + 1)
